@@ -2,7 +2,7 @@
 // Declaring a variable
 let name = "Bader"
  let numStatus;
- let num = 7;
+ let num = 8;
  let result;
 
  // greating function
@@ -15,22 +15,16 @@ greet(name); // print greeting
 
 // check if odd return true 
 function isOdd(n) {
-numStatus = (n % 2 == 0 ) ? false:true
+return (n % 2 == 0 ) ? false:true
 
 }
 
 isOdd (num);
-console.log("is the number odd? "+ numStatus)
+
 
 // calcuate how many odds smaller than the number
 function oddsSmallerThan(n) {
- 
-  if (numStatus == true){
-    console.log (`There are   ${(n/2) - 0.5}  Odds smaller than ${num}`)
-  }else
-  console.log (`There are   ${(n/2)}  Odds smaller than ${num}`)
- 
-}
+return parseInt(n/2)}
 
 oddsSmallerThan(num);
 /*
@@ -41,18 +35,17 @@ oddsSmallerThan(num);
  */
 
 function squareOrDouble(n) {
-
-  if (numStatus == true){
-    result = n*n
-  }else
-   result = 2*n;
+ 
+  if (isOdd(n)){
+    return  n*n
+    
+  }else {
+   return  2*n;
+   
+  }
 }
 
 squareOrDouble(num);
-if (numStatus == true) {
-console.log(`since ${num} is odd the square is ${result}`);
-}else {
 
-}console.log(`since ${num} is even the double is ${result}`);
 
 module.exports = { greet, isOdd, oddsSmallerThan, squareOrDouble };
